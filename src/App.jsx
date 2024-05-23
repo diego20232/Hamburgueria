@@ -5,6 +5,10 @@ import { Button } from "@rneui/themed";
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import UserList from "./views/UserList";
+import Teste from "./components/Reduce";
+import ListTeste from "./components/ListTeste";
+import Reduce from "./components/Reduce";
+import ReduceA from "./components/ReduceA";
 
 
 const Stack = createNativeStackNavigator();
@@ -21,11 +25,11 @@ export default props => {
                 headerTitleStyle: {
                     fontWeight: 'bold',
                 }
-            }} initialRouteName="UserList">
-                <Stack.Screen name="UserList" component={UserList}
+            }} initialRouteName="ReduceA">
+                <Stack.Screen name="ListTeste" component={ListTeste}
                     options={({ navigation }) => {
                         return {
-                            title: 'Faça Seu pedido',
+                            title: '',
                             headerRight: () => (
                                 <Button onPress={() => navigation.navigate("UserForm")}
                                     type="clear"
@@ -38,6 +42,24 @@ export default props => {
                     }
                      
                      />
+
+                     <Stack.Screen
+                     name="ReduceA" component={ReduceA} options={{
+                        headerStyle: {
+                            backgroundColor: '#F4A460'
+                        
+                        }, 
+                        headerTitle: 'Sacolão do DI',
+                        headerTitleStyle: {
+                            color: 'black',
+                            fontSize: 25,
+                            fontWeight: 'bold',
+                            
+                        },
+                        headerTitleAlign: 'center'
+                     }}
+                     />
+                     
                 
             </Stack.Navigator>
         </NavigationContainer>

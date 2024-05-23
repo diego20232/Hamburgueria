@@ -1,6 +1,6 @@
 import React from "react";
 import { FlatList, Alert, View } from "react-native";
-import { ListItem, Avatar,  } from "@rneui/themed";
+import { ListItem, Avatar  } from "@rneui/themed";
 import { SafeAreaView } from "react-native";
 import users from "../data/users";
 import { Button } from "react-native-paper";
@@ -9,7 +9,6 @@ import { ThemeProvider } from "react-native-paper";
 
 
 export default props => {
-
 
 
     function getUserItem({ item: user }) {
@@ -48,7 +47,7 @@ export default props => {
         )
     }
     return (
-        <View  style={{flex: 1, backgroundColor: '#CD853F',}}>
+        <View  style={{backgroundColor: '#CD853F'}}>
             <FlatList
                 keyExtractor={user => user.id.toString()}
                 data={users}
